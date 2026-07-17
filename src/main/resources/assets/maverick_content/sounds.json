@@ -1,0 +1,10 @@
+{
+  "menu_music": {
+    "sounds": [
+      {
+        "name": "maverick_content:menu_music",
+        "stream": true
+      }
+    ]
+  }
+}
