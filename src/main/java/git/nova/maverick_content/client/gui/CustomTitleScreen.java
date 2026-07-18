@@ -287,18 +287,22 @@ public class CustomTitleScreen extends Screen {
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         if (button == 0) {
             if (isInsideTextHitbox(mouseX, mouseY, LEFT_SHEET_X, LEFT_SHEET_Y, LEFT_ROTATION_DEG, SIDE_SHEET_H_RATIO, QUIT_TEXT, 0f, 0.35f, 1.5f)) {
+                this.minecraft.getSoundManager().play(SimpleSoundInstance.forUI(ModSoundEvents.WRITING.get(), 1.0F, 1.0F));
                 this.minecraft.stop();
                 return true;
             }
             if (isInsideTextHitbox(mouseX, mouseY, RIGHT_SHEET_X, RIGHT_SHEET_Y, RIGHT_ROTATION_DEG, SIDE_SHEET_H_RATIO, OPT_TEXT, 0f, 0.30f, 1.3f)) {
+                this.minecraft.getSoundManager().play(SimpleSoundInstance.forUI(ModSoundEvents.WRITING.get(), 1.0F, 1.0F));
                 this.minecraft.setScreen(new OptionsScreen(this, this.minecraft.options));
                 return true;
             }
             if (isInsideTextHitbox(mouseX, mouseY, CENTER_SHEET_X, CENTER_SHEET_Y, 0f, CENTER_SHEET_H_RATIO, SP_TEXT, -0.24f, 0.38f, 1.0f)) {
+                this.minecraft.getSoundManager().play(SimpleSoundInstance.forUI(ModSoundEvents.WRITING.get(), 1.0F, 1.0F));
                 this.minecraft.setScreen(new SelectWorldScreen(this));
                 return true;
             }
             if (isInsideTextHitbox(mouseX, mouseY, CENTER_SHEET_X, CENTER_SHEET_Y, 0f, CENTER_SHEET_H_RATIO, MP_TEXT, 0.22f, 0.38f, 1.0f)) {
+                this.minecraft.getSoundManager().play(SimpleSoundInstance.forUI(ModSoundEvents.WRITING.get(), 1.0F, 1.0F));
                 this.minecraft.setScreen(new JoinMultiplayerScreen(this));
                 return true;
             }

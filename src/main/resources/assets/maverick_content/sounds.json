@@ -6,5 +6,13 @@
         "stream": true
       }
     ]
+  },
+  "writing": {
+    "sounds": [
+      {
+        "name": "maverick_content:writing",
+        "stream": false
+      }
+    ]
   }
 }

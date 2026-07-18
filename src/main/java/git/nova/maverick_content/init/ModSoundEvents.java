@@ -17,6 +17,11 @@ public class ModSoundEvents {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath(MaverickContentMod.MODID, "menu_music")));
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> WRITING =
+            SOUND_EVENTS.register("writing",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath(MaverickContentMod.MODID, "writing")));
+
     public static void register(IEventBus bus) {
         SOUND_EVENTS.register(bus);
     }
